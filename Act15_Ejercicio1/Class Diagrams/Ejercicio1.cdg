@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio1">
+  <ClassDiagramComponents>
+    <Class name="Pedido" package="" visibility="public" xPosition="326.0" yPosition="65.0">
+      <Fields>
+        <Field name="fechaRecibo" type="String" visibility="private"/>
+        <Field name="precio" type="float" visibility="private"/>
+        <Field name="cantidad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="despacho" returnType="void" visibility="public"/>
+        <Method name="cerrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="" visibility="public" xPosition="10.0" yPosition="94.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="direccion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Producto" package="" visibility="public" xPosition="326.0" yPosition="368.0">
+      <Fields>
+        <Field name="cantidad" type="int" visibility="private"/>
+        <Field name="precio" type="float" visibility="private"/>
+        <Field name="correcto" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="realiza" source="Cliente" target="Pedido" type="Composition" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
+    <HasRelation name="tiene" source="Pedido" target="Producto" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+    <HasRelation name="pertenece" source="Pedido" target="Cliente" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
